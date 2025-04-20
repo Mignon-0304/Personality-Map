@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <style>
+
+      body{
+        background-color: #4b9b5c; /* 背景顏色 */
+        position: absolute;
+        width: 600px;
+        left: 100px;
+      }
+
+      .hugging_earth {
+        object-fit: cover; /* 填滿 */
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <center>
+      <h1>性格地圖：全球哪個國家最像你？</h1>
+      <p>每個國家都曾創造屬於自己的一段歷史，並為這個世界添上一筆其獨有的色彩。我們試著將這些歷史事件訴諸人性，現在就讓我們來揭曉哪段時期的哪個國家和你的特質最相符吧！</p><br>
+      <form action='/form', methods=['GET']>
+        <h2>讓我們開始吧！</h2>
+        你的名字 : <input type='text' name='name' required='required'><br><br>
+      <input type='submit'></form>
+      <br><br><p>歡迎看看所有結果：<a href='/all_countries'>國家類型一覽</a></p><br>
+      <img src="https://i.pinimg.com/564x/53/64/23/53642353130a7942b8aff6669d9c919c.jpg" class="hugging_earth">
+    </center>
+
+  </body>
+
+</html>
