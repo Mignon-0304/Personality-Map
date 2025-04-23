@@ -82,9 +82,9 @@ def form():
 
             else: #沒讀到空的行，代表這是本題的選項之一，要把它變成單選題選項！
                 a += '''
-                <label><input type="radio" name='option{}' id="radio" value="{}" required='required' onclick=javascript:location.href='#{}'>{}
+                <label><input type="radio" name='option{}' id="radio_{}_{}" value="{}" required='required' onclick=javascript:location.href='#{}'>{}
                 </label><br><br>
-                '''.format(i, option, i+1, option)
+                '''.format(i, i, F[1], option, i+1, option)
                 #onclick=javascript:location.href='#{}'的意思：用力召喚一個javascript用法onclick。只要使用者點選這個選項，就會跳到下一個id是i+1的section(id是在剛剛設定的，本選項的id是i，下個選項的id是i+1)，要指名的id前面要加井字號。
                 F[1] += 1
 
