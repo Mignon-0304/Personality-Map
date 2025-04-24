@@ -91,7 +91,7 @@ def form():
                 n += 1
 
     a += '''
-    <br><br>作答完成: <input type='submit'></form>'''
+    <br><br><p class='submit'>作答完成: </p><input type='submit'></form><br><br>'''
 
     return a
 
@@ -178,9 +178,7 @@ def personality():
     final_result=render_template('final.html')
 
     final_result+='''
-    <img src="{}">'''.format(imgurl)
-
-    final_result+='''
+    <body>
     <p class='x'>{}，你的測驗結果為：</p>
     <h1>{}</h1>'''.format(Name[0], person)
 
@@ -189,20 +187,25 @@ def personality():
             final_result+='''<p class='y'><strong><font size="4">#{} {}% 
   '''.format(lol[i], ha[i]) #把超過50%的特質列出來顯示在網頁上
 
-    final_result+='<br><br>與你最像的國家:</font></strong></p>'
-
+    final_result+='<br><br>與你最像的國家:</font></strong></p><br>'
+    final_result+='''
+    <img src="{}"><br>'''.format(imgurl)
+    final_result +='''
+          <iframe width=10% src="https://www.youtube.com/embed/lrE8fWHHyW4?si=EGwba7R7v82A2H23&autoplay=1&mute=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    '''
     #下面這段：marquee跑馬燈！（好像是過時的代碼但還沒淘汰它的樣子）內容是播放歌曲的名稱。
     #其中，width代表跑馬燈長度；bgcolor代表跑馬燈背景顏色
     final_result+='<marquee width="500" bgcolor=#EAFAA6>歌曲：winter _____ . | peaceful acoustic</marquee>'
 
     final_result+='''<br><br><a href="/">回首頁</a><br>
-    <a href="/all_countries">國家類型一覽</a>'''
+    <a href="/all_countries">國家類型一覽</a>
+    </body>'''
 
     return final_result
 
 @app.route('/all_countries') #本頁摘要：所有國家、人格類型
 def all_countries():
-    html='<h1 align="center" style="white-space: nowrap;"><font color="#FFFFFF" style="background-color:#CA8B4F;">-國家類型一覽-</font></h1>'
+    html='<title>All Types 國家類型一覽</title><h1 align="center" style="white-space: nowrap;"><font color="#FFFFFF" style="background-color:#CA8B4F;">-國家類型一覽-</font></h1>'
     for i in range(16):
         html+='''<h1 align="center">{}.{}<br>
         <img src="{}" width="400px"></h1>'''.format(i+1,type[i], pic[type[i]])
