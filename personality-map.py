@@ -191,7 +191,7 @@ def personality():
     final_result+='''
     <img src="{}"><br>'''.format(imgurl)
     final_result +='''
-          <iframe width=10% src="https://www.youtube.com/embed/lrE8fWHHyW4?si=EGwba7R7v82A2H23&autoplay=1&mute=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width='10%' src="https://www.youtube.com/embed/lrE8fWHHyW4?si=EGwba7R7v82A2H23&autoplay=1&mute=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     '''
     #下面這段：marquee跑馬燈！（好像是過時的代碼但還沒淘汰它的樣子）內容是播放歌曲的名稱。
     #其中，width代表跑馬燈長度；bgcolor代表跑馬燈背景顏色

@@ -12,9 +12,9 @@
       }
 
       label {
-        position: relative;
-        left: 20px;    /*left,right,top...：在這個方向留空間*/
-        white-space: nowrap; /* 溢出來也不管：讓他不要隨著視窗伸縮而改變排版*/
+        position: relative;  /* relative to 原位置。其他東西會以為你還待在原位 */
+        left: 20px;    /* left,right,top...：在這個方向留空間 */
+        white-space: nowrap; /* 溢出來也不管，讓他不要隨著視窗伸縮而改變排版 */
       }
 
       html {
@@ -23,7 +23,7 @@
 
       .submit {
         margin-left: 40px;
-        display: inline;
+        display: inline;  /* 下一個元素可以跟這個元素同一行 */
       }
 
     </style>
